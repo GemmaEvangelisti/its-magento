@@ -1,0 +1,17 @@
+[0;1;31m●[0m elasticsearch.service - Elasticsearch
+   Loaded: loaded (/lib/systemd/system/elasticsearch.service; disabled; vendor preset: enabled)
+   Active: [0;1;31mfailed[0m (Result: exit-code) since Sun 2022-06-12 22:33:20 UTC; 26s ago
+     Docs: https://www.elastic.co
+  Process: 20371 ExecStart=/usr/share/elasticsearch/bin/systemd-entrypoint -p ${PID_DIR}/elasticsearch.pid --quiet [0;1;31m(code=exited, status=1/FAILURE)[0m
+ Main PID: 20371 (code=exited, status=1/FAILURE)
+
+Jun 12 22:33:20 localhost systemd-entrypoint[20371]: error:
+Jun 12 22:33:20 localhost systemd-entrypoint[20371]: OpenJDK 64-Bit Server VM warning: INFO: os::commit_memory(0x00000000c1a00000, 1046478848, 0) failed; error='Not enough space' (errno=12)
+Jun 12 22:33:20 localhost systemd-entrypoint[20371]:         at org.elasticsearch.tools.launchers.JvmOption.flagsFinal(JvmOption.java:119)
+Jun 12 22:33:20 localhost systemd-entrypoint[20371]:         at org.elasticsearch.tools.launchers.JvmOption.findFinalOptions(JvmOption.java:81)
+Jun 12 22:33:20 localhost systemd-entrypoint[20371]:         at org.elasticsearch.tools.launchers.JvmErgonomics.choose(JvmErgonomics.java:38)
+Jun 12 22:33:20 localhost systemd-entrypoint[20371]:         at org.elasticsearch.tools.launchers.JvmOptionsParser.jvmOptions(JvmOptionsParser.java:135)
+Jun 12 22:33:20 localhost systemd-entrypoint[20371]:         at org.elasticsearch.tools.launchers.JvmOptionsParser.main(JvmOptionsParser.java:86)
+Jun 12 22:33:20 localhost systemd[1]: [0;1;39m[0;1;31m[0;1;39melasticsearch.service: Main process exited, code=exited, status=1/FAILURE[0m
+Jun 12 22:33:20 localhost systemd[1]: [0;1;39m[0;1;31m[0;1;39melasticsearch.service: Failed with result 'exit-code'.[0m
+Jun 12 22:33:20 localhost systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start Elasticsearch.[0m

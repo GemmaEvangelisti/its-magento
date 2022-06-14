@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="default_head_blocks"/>
+    <body>
+    <referenceContainer name="header.panel" label="Page Header Panel" htmlTag="div" htmlClass="panel header">
+                  <block class="Magento\Framework\View\Element\Template" name="panelwrapper" template="Magento_Theme::panelwrapper.phtml"> 
+                    </block>
+                    <referenceBlock name="top.links" remove="true"/>
+                    
+                   
+                </referenceContainer>
+   <referenceContainer name="footer" htmlClass="footer content row">
+         <block class="Magento\Framework\View\Element\Template" name="footer-3colonna" template="Magento_Theme::link.phtml" />
+        <referenceBlock name="footer_links">
+                    <arguments>
+                        <argument name="css_class" xsi:type="string">footer links col</argument>
+                    </arguments>
+                </referenceBlock> 
+    </referenceContainer>
+    
+    </body>
+</page>
