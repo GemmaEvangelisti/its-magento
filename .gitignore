@@ -1,6 +1,4 @@
 app/*
-!/app/code/*
-!/app/design/*
 /bin/*
 /dev/*
 /generated/*
