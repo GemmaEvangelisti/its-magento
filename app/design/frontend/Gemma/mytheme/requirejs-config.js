@@ -4,13 +4,13 @@
  */
 
  var config = {
-     //path contiene le librerie
-    paths: {
-      //  'glide': 'js/glide.min'
+     
+    paths: { //contiene le librerie
+        'glide': 'js/glide.min'
 
     }, 
-    //ordine
-    shim:{
+    
+    shim: { //ordine
         'glide': {
             deps: ['jquery']
         },
@@ -20,11 +20,10 @@
         }
     },
     map: {
-        '': {
-            bootstrap: 'js/bootstrap.min',
-            '@popperjs/core': 'js/popper.min',
-         //   'glide' : 'js/glide.min'
-
+        '*': {
+            bootstrap: 'js/bootstrap.bundle',
+            'glide': 'js/glide.min',
+            'app': 'js/app',
         }
     }
 };
